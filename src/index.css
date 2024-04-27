@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@media screen and (max-width: 750px) {
+  .bg {
+    background: url('../assets/images/background-pattern-mobile.svg');
+  }
+
+  .wrapper {
+    max-width: 500px;
+  }
+
+  .header img {
+    height: 35px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .bg {
+    background: url('../assets/images/background-pattern-desktop.svg');
+  }
+
+  .wrapper {
+    max-width: 650px;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+}
+
+:root {
+  --color-bg-wrapper: hsl(0, 0%, 100%);
+  --color-bg-body: hsl(275, 100%, 97%);
+  --color-secondary: hsl(292, 16%, 49%);
+  --color-primary: hsl(292, 42%, 14%);
+  --color-highlight: #b72af5;
+
+  --font-family: 'Work Sans', sans-serif;
+  --font-size: 16px;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding-top: 13rem;
+  background-color: var(--color-bg-body);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  width: 100%;
+}
+
+.wrapper {
+  margin: 0 2rem;
+  padding: 2rem;
+  width: 100%;
+  background-color: var(--color-bg-wrapper);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  color: var(--color-primary);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  transition: margin 0.3s ease;
+}
+
+.top button {
+  /* outline: none; */
+  border: none;
+  background-color: transparent;
+}
+
+.question {
+  margin-right: 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.question:hover {
+  color: var(--color-highlight);
+}
+
+.top img {
+  align-self: flex-start;
+  height: 40px;
+}
+
+.plus,
+.minus {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+hr {
+  margin: 1.5rem 0;
+  height: 1px;
+  background-color: var(--color-bg-body);
+  border: none;
+}
+
+.answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  color: var(--color-secondary);
+  line-height: 1.5rem;
+}
