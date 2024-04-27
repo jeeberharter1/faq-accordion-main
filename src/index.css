@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   .bg {
     background: url('../assets/images/background-pattern-mobile.svg');
   }
 
   .wrapper {
     max-width: 500px;
+    padding: 2rem;
   }
 
   .header img {
@@ -18,13 +19,14 @@
   }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 650px) {
   .bg {
     background: url('../assets/images/background-pattern-desktop.svg');
   }
 
   .wrapper {
-    max-width: 650px;
+    max-width: 600px;
+    padding: 2.5rem;
   }
   
   .title {
@@ -72,17 +74,16 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 350px;
   width: 100%;
+  z-index: -1;
 }
 
 .wrapper {
   margin: 0 2rem;
-  padding: 2rem;
   width: 100%;
   background-color: var(--color-bg-wrapper);
   border-radius: 10px;
@@ -90,6 +91,8 @@ body {
   flex-direction: column;
   height: max-content;
   color: var(--color-primary);
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15); 
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15);
 }
 
 .header {
